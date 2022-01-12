@@ -1,0 +1,214 @@
+/* ====== Animação da  ballebot no load da página ====== */
+
+.conteudo-principal-img.animar {
+    animation: slide 1.5s forwards;
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ====== Animação da  ballebot no hover ======  */
+
+.conteudo-principal-img.animar-up-down {
+    animation: up-and-down 1.5s forwards;
+}
+
+@keyframes up-and-down {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    25% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(20px);
+    }
+}
+
+/* ====== Animação do  Botão me adicione no load da página ====== */
+
+.conteudo-principal-escrito-botao.animar {
+    animation: slide-btn 1.5s forwards;
+}
+@keyframes slide-btn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* ====== Animação do logo BALLERINI no footer da página ====== */
+
+.rodape-img {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+.rodape-img.ativar {
+    opacity: 1;
+    transform: translateX(0);
+    transition: .8s ease-in-out;
+}
+
+/* ====== Animação do botão do menu ====== */
+
+.cabecalho-btn.open .cabecalho-btn-burger {
+    background: transparent;
+}
+
+
+.cabecalho-btn.open .cabecalho-btn-burger::before {
+    transform: rotate(45deg);
+}
+
+.cabecalho-btn.open .cabecalho-btn-burger::after {
+    transform: rotate(-45deg);
+}
+
+.cabecalho-btn.open .cabecalho-btn-burger::before,
+.cabecalho-btn.open .cabecalho-btn-burger::after {
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* ====== animação abrir o menu ======= */
+
+/* adaptado para telas de tablets e smartphones */
+@media screen and (max-width: 940px) {
+    
+    /* ======= Abrir menu ====== */
+
+    body {
+        overflow-x: hidden;
+    }
+    .cabecalho-menu {
+        position: absolute;
+        top: 51px;
+        right: 0;
+        width: 50vw;
+        height: calc(100vh - 51px);
+        background-color: #8e5d52;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 0;
+        border-radius: 10px;
+        z-index: 1000;
+        overflow-x: hidden;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .cabecalho-menu.open-list {
+        display: flex;
+        padding-left: 20px;
+        width: 50vw;
+        transition: all .3s ease-in;
+        visibility: visible;
+        transition: all 0.5s ease-in-out;
+    }
+
+    /* ====== configurando o btn menu ====== */
+
+    .cabecalho-btn {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    
+
+    .cabecalho-btn-burger,
+    .cabecalho-btn-burger::before,
+    .cabecalho-btn-burger::after {
+        width: 25px;
+        height: 2px;
+        background-color: #fff;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+
+    .cabecalho-btn-burger::before,
+    .cabecalho-btn-burger::after {
+        content: '';
+        position: absolute;
+    }
+
+    .cabecalho-btn-burger::before {
+        transform: translateY(-8px);
+    }
+
+    .cabecalho-btn-burger::after {
+        transform: translateY(8px);
+    }
+
+    /* ====== Adaptando o conteúdo principal ====== */
+
+    .conteudo-principal-escrito {
+        width: 100%;
+        align-items: center;
+    }
+
+    .conteudo-principal-escrito-titulo {
+        font-size: 48px;
+    }
+
+    .conteudo-principal-escrito-subtitulo {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .conteudo-secundario {
+        align-items: center;
+    }
+
+    .conteudo-secundario-paragrafo {
+        text-align: center;
+    }
+
+    .conteudo-principal-img {
+        max-width: 300px;
+        height: 50%;
+    }
+
+    .cabecalho {
+        justify-content: space-between;
+    }
+
+    /* por uma questão de vizualização 
+        decidi colocar o espaçamento
+        entre os itens como 'space-between'
+    */
+}
+
+@media screen and (max-width: 480px) {
+    
+    .conteudo-principal-img {
+        width: 380px;
+        height: 350px;
+    }
+}

@@ -1,0 +1,32 @@
+.cabecalho {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.cabecalho-img {
+    height: 72px;
+    cursor: pointer;
+}
+
+.cabecalho-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.cabecalho-menu-item {
+    font-family: var(--sarala);
+    color:var(--color-texto);
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.cabecalho-menu-item:hover {
+    color: var(--color-hover);
+    transition: all .15s ease-in-out;
+}
+
+.cabecalho-btn {
+    display: none;
+}

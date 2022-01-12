@@ -1,0 +1,9 @@
+:root {
+    --sarala: 'Sarala',sans-serif;
+    --righteous: 'Righteous',cursive;
+    --color-texto: #fff2e7;
+    --bg-botao: #ecd6c4;
+    --box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+    --color-hover: #f17d1e;
+    --degrade-marrom: 68.15deg, #2f2325 16.62%, #8e5d52 85.61%
+}
